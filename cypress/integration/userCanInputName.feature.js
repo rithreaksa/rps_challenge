@@ -4,5 +4,6 @@ describe("User", () => {
     cy.visit("http://localhost:3000/");
     cy.get("#name").type("Reaksa");
     cy.get("#play").click();
+    cy.get("#name").should("contain", "Reaksa");
   });
 });

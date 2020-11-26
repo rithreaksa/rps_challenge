@@ -5,21 +5,17 @@ export const WON = "won";
 export const LOST = "lost";
 export const DRAW = "draw";
 
-function getMachineChoice() {
+export function getComputerChoice() {
   const choices = [ROCK, PAPER, SCISSORS];
   return choices[Math.floor(Math.random() * 3)];
 }
 
-function getResult(user, machine) {
-  if (user === ROCK && machine === SCISSORS) return WON;
-  if (user === PAPER && machine === ROCK) return WON;
-  if (user === SCISSORS && machine === PAPER) return WON;
-  if (machine === ROCK && machine === SCISSORS) return LOST;
-  if (machine === PAPER && machine === ROCK) return LOST;
-  if (machine === SCISSORS && machine === PAPER) return LOST;
+export function getResult(player, computer) {
+  if (player === ROCK && computer === SCISSORS) return WON;
+  if (player === PAPER && computer === ROCK) return WON;
+  if (player === SCISSORS && computer === PAPER) return WON;
+  if (computer === ROCK && player === SCISSORS) return LOST;
+  if (computer === PAPER && player === ROCK) return LOST;
+  if (computer === SCISSORS && player === PAPER) return LOST;
   return DRAW;
 }
-
-const Game = { getMachineChoice, getResult };
-
-export default Game;

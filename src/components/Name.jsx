@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Form, Grid, Header } from "semantic-ui-react";
 
-const NameInput = ({ onSubmitHandler }) => {
+const Name = ({ onSubmitHandler }) => {
   return (
     <Container>
       <Grid centered style={{ height: "100vh" }}>
@@ -21,4 +21,4 @@ const NameInput = ({ onSubmitHandler }) => {
   );
 };
 
-export default NameInput;
+export default Name;

@@ -3,7 +3,7 @@ import { Grid, Header, Message } from "semantic-ui-react";
 
 import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from "./game-logic";
 
-const Play = ({ result, computerChoice, playerChoice}) => {
+const Play = ({ result, computerChoice, playerChoice }) => {
   const getResultText = (result) => {
     if (result === WON) return "Won";
     if (result === LOST) return "Lost";
@@ -29,7 +29,7 @@ const Play = ({ result, computerChoice, playerChoice}) => {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Message>
+          <Message id="computer" color={result === LOST ? "teal" : "grey"}>
             <Message.Header>{getChoiceEmoji(computerChoice)}</Message.Header>
             {getChoiceText(computerChoice)}
           </Message>
@@ -37,7 +37,7 @@ const Play = ({ result, computerChoice, playerChoice}) => {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Header color="teal" size="huge">
+          <Header id="result" color="teal" size="huge">
             You {getResultText(result)}!
           </Header>
         </Grid.Column>
@@ -47,7 +47,7 @@ const Play = ({ result, computerChoice, playerChoice}) => {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Message>
+          <Message id="player" color={result === WON ? "teal" : "grey"}>
             <Message.Header>{getChoiceEmoji(playerChoice)}</Message.Header>
             {getChoiceText(playerChoice)}
           </Message>

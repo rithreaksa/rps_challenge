@@ -1,6 +1,7 @@
 import React from "react";
 
-import NamePage from "./components/NamePage";
+import Name from "./components/Name";
+import { getComputerChoice, getResult } from "./game-logic";
 import { useLocalStorageObjectStates } from "./helpers/local-storage";
 import Home from "./Home";
 
@@ -28,6 +29,14 @@ const App = () => {
 
   const onClick = (event) => {
     event.preventDefault();
+    const playerChoice = event.target.name;
+    const computerChoice = getComputerChoice();
+    setState({
+      ...state,
+      playerChoice,
+      computerChoice,
+      result: getResult(playerChoice, computerChoice),
+    });
   };
 
   if (state.name) {
@@ -36,7 +45,7 @@ const App = () => {
     );
   }
 
-  return <NamePage onSubmitHandler={onNameSubmit} />;
+  return <Name onSubmitHandler={onNameSubmit} />;
 };
 
 export default App;

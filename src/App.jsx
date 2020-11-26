@@ -1,9 +1,9 @@
 import React from "react";
 
+import Home from "./components/Home";
 import Name from "./components/Name";
-import { getComputerChoice, getResult } from "./game-logic";
+import { getComputerChoice, getResult } from "./helpers/game-logic";
 import { useLocalStorageObjectStates } from "./helpers/local-storage";
-import Home from "./Home";
 
 const defaultState = {
   result: null,

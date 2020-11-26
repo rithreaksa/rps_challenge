@@ -1,8 +1,8 @@
 import React from "react";
-import { Grid, Message } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 
-import RadarChart from "./components/RadarChart";
 import Play from "./Play";
+import RadarChart from "./RadarChart";
 
 const Game = ({
   name,

@@ -1,19 +1,21 @@
 import React from "react";
-import { Button, Container, Grid, Header } from "semantic-ui-react";
+import { Container, Grid } from "semantic-ui-react";
 
-const Home = ({ name, onLogoutHandler }) => {
+import Game from "./Game";
+import Head from "./Head";
+
+const Home = ({ name, onLogoutHandler, onClickHandler }) => {
   return (
     <Container>
-      <Grid padded>
-        <Grid.Row columns={3}>
-          <Grid.Column></Grid.Column>
-          <Grid.Column verticalAlign="middle" textAlign="center">
-            <Header id="name">Hello {name}!</Header>
+      <Grid>
+        <Grid.Row>
+          <Grid.Column>
+            <Head name={name} onLogoutHandler={onLogoutHandler} />
           </Grid.Column>
-          <Grid.Column textAlign="right">
-            <Button id="logout" onClick={onLogoutHandler}>
-              Logout
-            </Button>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column>
+            <Game onClickHandler={onClickHandler} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

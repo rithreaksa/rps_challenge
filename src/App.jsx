@@ -19,8 +19,14 @@ const App = () => {
     setState({});
   };
 
+  const onClick = (event) => {
+    event.preventDefault();
+  };
+
   if (state.name) {
-    return <Home {...state} onLogoutHandler={onLogout} />;
+    return (
+      <Home {...state} onLogoutHandler={onLogout} onClickHandler={onClick} />
+    );
   }
 
   return <NamePage onSubmitHandler={onNameSubmit} />;

@@ -25,6 +25,7 @@ const Home = ({
         <Grid.Row>
           <Grid.Column>
             <Game
+              name={name}
               result={result}
               playerChoice={playerChoice}
               computerChoice={computerChoice}

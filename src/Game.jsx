@@ -1,9 +1,11 @@
 import React from "react";
 import { Grid, Message } from "semantic-ui-react";
 
+import RadarChart from "./components/RadarChart";
 import Play from "./Play";
 
 const Game = ({
+  name,
   result,
   playerChoice,
   computerChoice,
@@ -18,11 +20,13 @@ const Game = ({
           result={result}
           playerChoice={playerChoice}
           computerChoice={computerChoice}
+          player={player}
+          computer={computer}
           onClickHandler={onClickHandler}
         />
       </Grid.Column>
       <Grid.Column>
-        <Message>{JSON.stringify({ player, computer }, null, 2)}</Message>
+        <RadarChart name={name} player={player} computer={computer} />
       </Grid.Column>
     </Grid>
   );

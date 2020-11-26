@@ -1,9 +1,16 @@
 import React from "react";
-import { Button, Grid } from "semantic-ui-react";
+import { Button, Grid, Message } from "semantic-ui-react";
 
 import Result from "./Result";
 
-const Play = ({ result, playerChoice, computerChoice, onClickHandler }) => {
+const Play = ({
+  result,
+  playerChoice,
+  computerChoice,
+  player,
+  computer,
+  onClickHandler,
+}) => {
   let resultComponent = <></>;
   if (playerChoice && computerChoice && result) {
     resultComponent = (
@@ -34,6 +41,9 @@ const Play = ({ result, playerChoice, computerChoice, onClickHandler }) => {
             ✌🏽 <br /> Scissors
           </Button>
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row>
+        <Message>{JSON.stringify({ player, computer }, null, 2)}</Message>
       </Grid.Row>
     </Grid>
   );

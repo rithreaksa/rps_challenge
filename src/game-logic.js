@@ -1,9 +1,9 @@
-const ROCK = "rock";
-const PAPER = "paper";
-const SCISSORS = "scissors";
-const WON = "won";
-const LOST = "lost";
-const DRAW = "draw";
+export const ROCK = "rock";
+export const PAPER = "paper";
+export const SCISSORS = "scissors";
+export const WON = "won";
+export const LOST = "lost";
+export const DRAW = "draw";
 
 function getMachineChoice() {
   const choices = [ROCK, PAPER, SCISSORS];

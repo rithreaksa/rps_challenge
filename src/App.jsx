@@ -4,12 +4,19 @@ import NamePage from "./components/NamePage";
 import { useLocalStorageObjectStates } from "./helpers/local-storage";
 import Home from "./Home";
 
+const defaultState = {
+  result: null,
+  playerChoice: null,
+  computerChoice: null,
+};
+
 const App = () => {
   const [state, setState] = useLocalStorageObjectStates("rps");
 
   const onNameSubmit = (event) => {
     event.preventDefault();
     setState({
+      ...defaultState,
       name: event.target.name.value.trim(),
     });
   };

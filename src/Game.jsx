@@ -1,9 +1,16 @@
 import React from "react";
-import { Grid } from "semantic-ui-react";
+import { Grid, Message } from "semantic-ui-react";
 
 import Play from "./Play";
 
-const Game = ({ result, playerChoice, computerChoice, onClickHandler }) => {
+const Game = ({
+  result,
+  playerChoice,
+  computerChoice,
+  player,
+  computer,
+  onClickHandler,
+}) => {
   return (
     <Grid centered columns={2} divided stackable>
       <Grid.Column>
@@ -14,7 +21,9 @@ const Game = ({ result, playerChoice, computerChoice, onClickHandler }) => {
           onClickHandler={onClickHandler}
         />
       </Grid.Column>
-      <Grid.Column></Grid.Column>
+      <Grid.Column>
+        <Message>{JSON.stringify({ player, computer }, null, 2)}</Message>
+      </Grid.Column>
     </Grid>
   );
 };

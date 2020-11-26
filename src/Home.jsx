@@ -11,6 +11,8 @@ const Home = ({
   computerChoice,
   onLogoutHandler,
   onClickHandler,
+  player,
+  computer,
 }) => {
   return (
     <Container>
@@ -26,6 +28,8 @@ const Home = ({
               result={result}
               playerChoice={playerChoice}
               computerChoice={computerChoice}
+              player={player}
+              computer={computer}
               onClickHandler={onClickHandler}
             />
           </Grid.Column>

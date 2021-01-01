@@ -1,7 +1,7 @@
-import React from "react";
-import { Button, Grid, Message } from "semantic-ui-react";
+import React from 'react';
+import { Button, Grid, Message } from 'semantic-ui-react';
 
-import Result from "./Result";
+import Result from './Result';
 
 const Play = ({
   result,
@@ -13,13 +13,7 @@ const Play = ({
 }) => {
   let resultComponent = <></>;
   if (playerChoice && computerChoice && result) {
-    resultComponent = (
-      <Result
-        result={result}
-        playerChoice={playerChoice}
-        computerChoice={computerChoice}
-      />
-    );
+    resultComponent = <Result />;
   }
 
   return (

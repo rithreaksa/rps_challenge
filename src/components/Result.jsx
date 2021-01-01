@@ -5,9 +5,9 @@ import { Grid, Header, Message } from 'semantic-ui-react';
 import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from '../modules/game-logic';
 
 const Result = () => {
-  const result = useSelector((state) => state.result);
-  const playerChoice = useSelector((state) => state.playerChoice);
-  const computerChoice = useSelector((state) => state.computerChoice);
+  const result = useSelector((state) => state.game.result);
+  const playerChoice = useSelector((state) => state.game.playerChoice);
+  const computerChoice = useSelector((state) => state.game.computerChoice);
 
   const getResultText = (result) => {
     if (result === WON) return 'Won';

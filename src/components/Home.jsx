@@ -4,15 +4,7 @@ import { Container, Grid } from 'semantic-ui-react';
 import Game from './Game';
 import Head from './Head';
 
-const Home = ({
-  name,
-  result,
-  playerChoice,
-  computerChoice,
-  onClickHandler,
-  player,
-  computer,
-}) => {
+const Home = ({ onClickHandler, player, computer }) => {
   return (
     <Container>
       <Grid>
@@ -24,9 +16,6 @@ const Home = ({
         <Grid.Row>
           <Grid.Column>
             <Game
-              result={result}
-              playerChoice={playerChoice}
-              computerChoice={computerChoice}
               player={player}
               computer={computer}
               onClickHandler={onClickHandler}

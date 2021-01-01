@@ -1,24 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Button, Grid, Message } from 'semantic-ui-react';
 
 import Result from './Result';
 
-const Play = ({
-  result,
-  playerChoice,
-  computerChoice,
-  player,
-  computer,
-  onClickHandler,
-}) => {
-  let resultComponent = <></>;
-  if (playerChoice && computerChoice && result) {
-    resultComponent = <Result />;
-  }
+const Play = ({ player, computer, onClickHandler }) => {
+  let game = useSelector((state) => state.game);
 
   return (
     <Grid padded>
-      <Grid.Row>{resultComponent}</Grid.Row>
+      <Grid.Row>{game ? <Result /> : <></>}</Grid.Row>
       <Grid.Row columns={3}>
         <Grid.Column>
           <Button fluid onClick={onClickHandler} name="rock" id="rock">

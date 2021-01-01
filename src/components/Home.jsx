@@ -1,8 +1,8 @@
-import React from "react";
-import { Container, Grid } from "semantic-ui-react";
+import React from 'react';
+import { Container, Grid } from 'semantic-ui-react';
 
-import Game from "./Game";
-import Head from "./Head";
+import Game from './Game';
+import Head from './Head';
 
 const Home = ({
   name,
@@ -19,7 +19,7 @@ const Home = ({
       <Grid>
         <Grid.Row>
           <Grid.Column>
-            <Head name={name} onLogoutHandler={onLogoutHandler} />
+            <Head onLogoutHandler={onLogoutHandler} />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

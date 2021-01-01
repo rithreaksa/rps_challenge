@@ -1,7 +1,9 @@
-import React from "react";
-import { Button, Grid, Header } from "semantic-ui-react";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Button, Grid, Header } from 'semantic-ui-react';
 
-const Head = ({ name, onLogoutHandler }) => {
+const Head = ({ onLogoutHandler }) => {
+  const name = useSelector((state) => state.name);
   return (
     <Grid padded>
       <Grid.Row columns={3}>

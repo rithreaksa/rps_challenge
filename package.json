@@ -17,11 +17,14 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && echo '/* /index.html 200' | cat >build/_redirects",
+    "start": "PORT=3000 react-scripts start",
+    "start:silent": "BROWSER=none PORT=3000 react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cy:open": "cypress open & yarn start"
+    "cy:open": "cypress open",
+    "cypress": "start-server-and-test start:silent http://localhost:3000/ cy:open",
+    "cy:run": "BROWSER=none yarn start & cypress run"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +52,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^5.6.0"
+    "cypress": "^5.6.0",
+    "start-server-and-test": "^1.11.6"
   }
 }

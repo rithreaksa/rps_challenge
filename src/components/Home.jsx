@@ -4,7 +4,7 @@ import { Container, Grid } from 'semantic-ui-react';
 import Game from './Game';
 import Head from './Head';
 
-const Home = ({ onClickHandler, player, computer }) => {
+const Home = ({ onClickHandler }) => {
   return (
     <Container>
       <Grid>
@@ -15,11 +15,7 @@ const Home = ({ onClickHandler, player, computer }) => {
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <Game
-              player={player}
-              computer={computer}
-              onClickHandler={onClickHandler}
-            />
+            <Game onClickHandler={onClickHandler} />
           </Grid.Column>
         </Grid.Row>
       </Grid>

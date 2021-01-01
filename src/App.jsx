@@ -32,7 +32,7 @@ const App = () => {
   };
 
   if (state.name) {
-    return <Home {...state} onClickHandler={onClick} />;
+    return <Home onClickHandler={onClick} />;
   }
 
   return <Name />;

@@ -53,9 +53,9 @@ const options = {
 
 const RadarChart = () => {
   const name = useSelector((state) => state.name);
-  const player = useSelector((state) => state.player);
-  const computer = useSelector((state) => state.computer);
-  
+  const player = useSelector((state) => state.playResult.player);
+  const computer = useSelector((state) => state.playResult.computer);
+
   const data = {
     labels: [WON, LOST, DRAW, ROCK, PAPER, SCISSORS],
     datasets: [

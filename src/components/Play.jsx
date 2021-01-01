@@ -4,8 +4,9 @@ import { Button, Grid, Message } from 'semantic-ui-react';
 
 import Result from './Result';
 
-const Play = ({ player, computer, onClickHandler }) => {
+const Play = ({ onClickHandler }) => {
   let game = useSelector((state) => state.game);
+  let playResult = useSelector((state) => state.playResult);
 
   return (
     <Grid padded>
@@ -28,7 +29,7 @@ const Play = ({ player, computer, onClickHandler }) => {
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
-        <Message>{JSON.stringify({ player, computer }, null, 2)}</Message>
+        <Message>{JSON.stringify(playResult, null, 2)}</Message>
       </Grid.Row>
     </Grid>
   );

@@ -1,11 +1,10 @@
-import React from "react";
-import { Grid } from "semantic-ui-react";
+import React from 'react';
+import { Grid } from 'semantic-ui-react';
 
-import Play from "./Play";
-import RadarChart from "./RadarChart";
+import Play from './Play';
+import RadarChart from './RadarChart';
 
 const Game = ({
-  name,
   result,
   playerChoice,
   computerChoice,
@@ -26,7 +25,7 @@ const Game = ({
         />
       </Grid.Column>
       <Grid.Column>
-        <RadarChart name={name} player={player} computer={computer} />
+        <RadarChart />
       </Grid.Column>
     </Grid>
   );

@@ -1,9 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Button, Grid, Header } from 'semantic-ui-react';
 
-const Head = ({ onLogoutHandler }) => {
+const Head = () => {
   const name = useSelector((state) => state.name);
+  const dispatch = useDispatch();
+
+  const onLogoutHandler = (event) => {
+    event.preventDefault();
+    dispatch({ type: 'RESET' });
+  };
+
   return (
     <Grid padded>
       <Grid.Row columns={3}>

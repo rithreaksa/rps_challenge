@@ -9,7 +9,6 @@ const Home = ({
   result,
   playerChoice,
   computerChoice,
-  onLogoutHandler,
   onClickHandler,
   player,
   computer,
@@ -19,7 +18,7 @@ const Home = ({
       <Grid>
         <Grid.Row>
           <Grid.Column>
-            <Head onLogoutHandler={onLogoutHandler} />
+            <Head />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>

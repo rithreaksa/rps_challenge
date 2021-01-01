@@ -7,6 +7,9 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         name: action.payload,
       };
+
+    case 'RESET':
+      return initialState;
     default:
       return state;
   }

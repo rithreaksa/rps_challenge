@@ -8,11 +8,6 @@ import { getComputerChoice, getResult } from './modules/game-logic';
 const App = () => {
   const state = useSelector((state) => state);
 
-  const onLogout = (event) => {
-    event.preventDefault();
-    // setState({});
-  };
-
   const onClick = (event) => {
     event.preventDefault();
     const playerChoice = event.target.name;
@@ -37,9 +32,7 @@ const App = () => {
   };
 
   if (state.name) {
-    return (
-      <Home {...state} onLogoutHandler={onLogout} onClickHandler={onClick} />
-    );
+    return <Home {...state} onClickHandler={onClick} />;
   }
 
   return <Name />;

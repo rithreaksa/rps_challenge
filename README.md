@@ -38,7 +38,5 @@ I want to be able to see my data on the app
 - [JavaScript Random](https://github.com/chartjs/Chart.js/issues/4209)
   
 ## Improvement plans
-
-- To add table to display statistic data
 - To write test for validating statistic data
 - To add levels to the game to have Beginner, Advanced and Expert levels.

@@ -1,25 +1,30 @@
-import React from "react";
-import { Grid, Header, Message } from "semantic-ui-react";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Grid, Header, Message } from 'semantic-ui-react';
 
-import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from "../modules/game-logic";
+import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from '../modules/game-logic';
 
-const Play = ({ result, computerChoice, playerChoice }) => {
+const Result = () => {
+  const result = useSelector((state) => state.game.result);
+  const playerChoice = useSelector((state) => state.game.playerChoice);
+  const computerChoice = useSelector((state) => state.game.computerChoice);
+
   const getResultText = (result) => {
-    if (result === WON) return "Won";
-    if (result === LOST) return "Lost";
-    if (result === DRAW) return "Draw";
+    if (result === WON) return 'Won';
+    if (result === LOST) return 'Lost';
+    if (result === DRAW) return 'Draw';
   };
 
   const getChoiceText = (choice) => {
-    if (choice === ROCK) return "Rock";
-    if (choice === PAPER) return "Paper";
-    if (choice === SCISSORS) return "Scissors";
+    if (choice === ROCK) return 'Rock';
+    if (choice === PAPER) return 'Paper';
+    if (choice === SCISSORS) return 'Scissors';
   };
 
   const getChoiceEmoji = (choice) => {
-    if (choice === ROCK) return "✊🏽";
-    if (choice === PAPER) return "✋🏽";
-    if (choice === SCISSORS) return "✌🏽";
+    if (choice === ROCK) return '✊🏽';
+    if (choice === PAPER) return '✋🏽';
+    if (choice === SCISSORS) return '✌🏽';
   };
 
   return (
@@ -29,7 +34,7 @@ const Play = ({ result, computerChoice, playerChoice }) => {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Message id="computer" color={result === LOST ? "teal" : "grey"}>
+          <Message id="computer" color={result === LOST ? 'teal' : 'grey'}>
             <Message.Header>{getChoiceEmoji(computerChoice)}</Message.Header>
             {getChoiceText(computerChoice)}
           </Message>
@@ -47,7 +52,7 @@ const Play = ({ result, computerChoice, playerChoice }) => {
       </Grid.Row>
       <Grid.Row>
         <Grid.Column>
-          <Message id="player" color={result === WON ? "teal" : "grey"}>
+          <Message id="player" color={result === WON ? 'teal' : 'grey'}>
             <Message.Header>{getChoiceEmoji(playerChoice)}</Message.Header>
             {getChoiceText(playerChoice)}
           </Message>
@@ -57,4 +62,4 @@ const Play = ({ result, computerChoice, playerChoice }) => {
   );
 };
 
-export default Play;
+export default Result;

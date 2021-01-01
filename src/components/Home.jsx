@@ -1,38 +1,21 @@
-import React from "react";
-import { Container, Grid } from "semantic-ui-react";
+import React from 'react';
+import { Container, Grid } from 'semantic-ui-react';
 
-import Game from "./Game";
-import Head from "./Head";
+import Game from './Game';
+import Head from './Head';
 
-const Home = ({
-  name,
-  result,
-  playerChoice,
-  computerChoice,
-  onLogoutHandler,
-  onClickHandler,
-  player,
-  computer,
-}) => {
+const Home = () => {
   return (
     <Container>
       <Grid>
         <Grid.Row>
           <Grid.Column>
-            <Head name={name} onLogoutHandler={onLogoutHandler} />
+            <Head />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
-            <Game
-              name={name}
-              result={result}
-              playerChoice={playerChoice}
-              computerChoice={computerChoice}
-              player={player}
-              computer={computer}
-              onClickHandler={onClickHandler}
-            />
+            <Game />
           </Grid.Column>
         </Grid.Row>
       </Grid>

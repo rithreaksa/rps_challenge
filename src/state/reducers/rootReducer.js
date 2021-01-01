@@ -8,8 +8,15 @@ const rootReducer = (state = initialState, action) => {
         name: action.payload,
       };
 
+    case 'SET_GAME_RESULT':
+      return {
+        ...state,
+        ...action.payload,
+      };
+
     case 'RESET':
       return initialState;
+
     default:
       return state;
   }

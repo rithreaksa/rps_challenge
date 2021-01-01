@@ -1,9 +1,4 @@
 const initialState = {
-  game: {
-    result: null,
-    playerChoice: null,
-    computerChoice: null,
-  },
   playResult: {
     player: {
       won: 0,

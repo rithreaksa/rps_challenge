@@ -4,11 +4,11 @@ import { Grid } from 'semantic-ui-react';
 import Play from './Play';
 import RadarChart from './RadarChart';
 
-const Game = ({ onClickHandler }) => {
+const Game = () => {
   return (
     <Grid centered columns={2} divided stackable>
       <Grid.Column>
-        <Play onClickHandler={onClickHandler} />
+        <Play />
       </Grid.Column>
       <Grid.Column>
         <RadarChart />

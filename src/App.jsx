@@ -8,14 +8,6 @@ import { getComputerChoice, getResult } from './modules/game-logic';
 const App = () => {
   const state = useSelector((state) => state);
 
-  const onNameSubmit = (event) => {
-    event.preventDefault();
-    // setState({
-    //   ...defaultState,
-    //   name: event.target.name.value.trim(),
-    // });
-  };
-
   const onLogout = (event) => {
     event.preventDefault();
     // setState({});
@@ -50,7 +42,7 @@ const App = () => {
     );
   }
 
-  return <Name onSubmitHandler={onNameSubmit} />;
+  return <Name />;
 };
 
 export default App;

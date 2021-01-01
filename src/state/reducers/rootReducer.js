@@ -1,7 +1,15 @@
 import initialState from '../store/initialState';
 
 const rootReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case 'SET_PLAYER_NAME':
+      return {
+        ...state,
+        name: action.payload,
+      };
+    default:
+      return state;
+  }
 };
 
 export default rootReducer;

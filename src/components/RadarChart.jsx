@@ -1,8 +1,8 @@
 import React from "react";
 import { Radar } from "react-chartjs-2";
 
-import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from "../helpers/game-logic";
-import { getPercentage } from "../helpers/percentage";
+import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from "../modules/game-logic";
+import { getPercentage } from "../modules/percentage";
 
 const getChartData = (data) => {
   const totalResult = data.won + data.lost + data.draw;

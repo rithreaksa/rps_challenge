@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Header, Message } from "semantic-ui-react";
 
-import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from "../helpers/game-logic";
+import { DRAW, LOST, PAPER, ROCK, SCISSORS, WON } from "../modules/game-logic";
 
 const Play = ({ result, computerChoice, playerChoice }) => {
   const getResultText = (result) => {

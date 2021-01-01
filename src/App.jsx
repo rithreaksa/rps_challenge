@@ -1,32 +1,24 @@
-import React from "react";
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-import Home from "./components/Home";
-import Name from "./components/Name";
-import { getComputerChoice, getResult } from "./modules/game-logic";
-import  useLocalStorageObjectStates  from "./modules/local-storage";
-
-const defaultState = {
-  result: null,
-  playerChoice: null,
-  computerChoice: null,
-  player: { won: 0, lost: 0, draw: 0, rock: 0, paper: 0, scissors: 0 },
-  computer: { won: 0, lost: 0, draw: 0, rock: 0, paper: 0, scissors: 0 },
-};
+import Home from './components/Home';
+import Name from './components/Name';
+import { getComputerChoice, getResult } from './modules/game-logic';
 
 const App = () => {
-  const [state, setState] = useLocalStorageObjectStates("rps");
+  const state = useSelector((state) => state);
 
   const onNameSubmit = (event) => {
     event.preventDefault();
-    setState({
-      ...defaultState,
-      name: event.target.name.value.trim(),
-    });
+    // setState({
+    //   ...defaultState,
+    //   name: event.target.name.value.trim(),
+    // });
   };
 
   const onLogout = (event) => {
     event.preventDefault();
-    setState({});
+    // setState({});
   };
 
   const onClick = (event) => {
@@ -42,14 +34,14 @@ const App = () => {
     computer[computerChoice] = computer[computerChoice] + 1;
     computer[computerResult] = computer[computerResult] + 1;
 
-    setState({
-      ...state,
-      playerChoice,
-      computerChoice,
-      result: playerResult,
-      player,
-      computer,
-    });
+    // setState({
+    //   ...state,
+    //   playerChoice,
+    //   computerChoice,
+    //   result: playerResult,
+    //   player,
+    //   computer,
+    // });
   };
 
   if (state.name) {

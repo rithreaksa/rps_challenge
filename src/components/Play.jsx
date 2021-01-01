@@ -1,9 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Grid, Message } from 'semantic-ui-react';
+import { Button, Grid } from 'semantic-ui-react';
 
 import { getComputerChoice, getResult } from '../modules/game-logic';
 import Result from './Result';
+import TableResult from './TableResult';
 
 const Play = () => {
   const game = useSelector((state) => state.game);
@@ -59,7 +60,7 @@ const Play = () => {
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
-        <Message>{JSON.stringify(playResult, null, 2)}</Message>
+        <TableResult />
       </Grid.Row>
     </Grid>
   );

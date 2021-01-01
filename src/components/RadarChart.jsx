@@ -62,11 +62,12 @@ const RadarChart = () => {
       {
         label: name,
         data: getChartData(player),
-        backgroundColor: '#d35d6e99',
+        backgroundColor: '#77bfa3',
       },
       {
         label: 'Computer',
         data: getChartData(computer),
+        backgroundColor: '#c1bcac',
       },
     ],
   };

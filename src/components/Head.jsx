@@ -16,10 +16,10 @@ const Head = () => {
       <Grid.Row columns={3}>
         <Grid.Column></Grid.Column>
         <Grid.Column verticalAlign="middle" textAlign="center">
-          <Header id="name">Hello {name}!</Header>
+          <Header id="name" color="teal">Hello {name}!</Header>
         </Grid.Column>
         <Grid.Column textAlign="right">
-          <Button id="logout" onClick={onLogoutHandler}>
+          <Button id="logout" color="teal" onClick={onLogoutHandler}>
             Logout
           </Button>
         </Grid.Column>

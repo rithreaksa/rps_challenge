@@ -5,7 +5,7 @@
 Visit https://rithreaksa-rps.netlify.app/
 
 ## The code
-This project is written to allow players to play rock, paper and scissors against computer.
+This project is written to allow players to play rock, paper and scissors against computer. It is an assignment that is provided from Craft Academy as a take home project for tech interview.
 
 ```
 As a user
@@ -40,3 +40,12 @@ I want to be able to see my data on the app
 ## Improvement plans
 - To write test for validating statistic data
 - To add levels to the game to have Beginner, Advanced and Expert levels.
+
+## Author
+
+[Rithreaksa Khourn](https://github.com/rithreaksa)
+
+## License
+
+This project is licensed under the MIT License
+
